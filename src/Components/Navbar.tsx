@@ -15,13 +15,22 @@ const Navbar = () => {
                 <Reveal>
                     <Typography variant="body2" fontWeight={500}>~/home/Prerit</Typography>
                 </Reveal>
-                <Reveal>
-                    <a href="#work">
-                        <Button variant="contained">
-                        See my work
-                        </Button>
-                    </a>
-                </Reveal>
+                <Box display="flex" gap="1rem">
+                    <Reveal>
+                        <a href="#work">
+                            <Button variant="contained">
+                            See my work
+                            </Button>
+                        </a>
+                    </Reveal>
+                    <Reveal>
+                        <a href="https://prerit.sanity.studio/" target="_blank">
+                            <Button variant="outlined">
+                                Admin
+                            </Button>
+                        </a>
+                    </Reveal>
+                </Box>
             </Stack>
         </Box>
      );
