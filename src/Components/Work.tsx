@@ -67,7 +67,7 @@ const Work = () => {
                                 </Reveal>
                                 <img src={urlFor(item.imageRef).url()} alt={item.title} width="100%" />
                                 <Reveal>
-                                    <Typography variant="body2" color="black" fontWeight={500}>{item.content[0].text}</Typography>
+                                    <Typography variant="body2" fontWeight={500}>{item.content[0].text}</Typography>
                                 </Reveal>
                             </Box>
                         )

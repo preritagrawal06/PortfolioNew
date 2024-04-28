@@ -10,7 +10,7 @@ function App() {
 
   return (
     <>
-      <Stack>
+      <Stack bgcolor={theme => theme.palette.background.default}>
         <Navbar/>
         <Hero/>
         <Work/>

@@ -1,7 +1,12 @@
 import { Box, Stack, Typography, Button } from "@mui/material";
 import Reveal from "../utils/Reveal";
+import { useContext } from "react";
+import { switchThemeContext } from "../context/themeContext";
 
 const Navbar = () => {
+
+    const {toggleTheme, isDark} = useContext(switchThemeContext)
+
     return (
         <Box display="flex" alignItems="center" justifyContent="center">
             <Stack padding="1rem" flexDirection="row" alignItems="center" justifyContent="space-between" borderBottom="1px solid #34343466" 
@@ -29,6 +34,11 @@ const Navbar = () => {
                                 Admin
                             </Button>
                         </a>
+                    </Reveal>
+                    <Reveal>
+                        <Button variant="outlined" onClick={toggleTheme}>
+                            {!isDark ? "Light" : "Dark"}
+                        </Button>
                     </Reveal>
                 </Box>
             </Stack>

@@ -54,7 +54,7 @@ const Hero = () => {
             <Stack justifyContent="center" flexDirection="row" gap="0.5rem">
                 <a href="https://drive.google.com/file/d/1LE4i_kLy31OQAozQ9xhMZph3iwAMG8Jp/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
                     <Button variant="contained" sx={{height:"100%"}}>
-                            <Typography variant="body1" color="white">Resume</Typography>
+                        Resume
                     </Button>
                 </a>
                 <a href="https://github.com/preritagrawal06" target="_blank" rel="noopener noreferrer">
