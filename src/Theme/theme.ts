@@ -1,20 +1,14 @@
-import { createTheme } from "@mui/material";
+import { ThemeOptions } from "@mui/material";
 
-const theme = createTheme({
-  typography: {
-    allVariants: {
-      fontFamily: "'Noto Sans', sans-serif",
-      color: "#343434",
-    },
-  },
-  components: {
+
+const componentsOverride : ThemeOptions["components"]= {
     MuiButton: {
       defaultProps: {
         disableElevation: true,
         disableRipple: true,
       },
       styleOverrides: {
-        root: ({ ownerState }) => ({
+        root: (ownerState: any) => ({
           ...(ownerState.variant === "contained" && {
             backgroundColor: "#343434",
             borderRadius: 0,
@@ -54,7 +48,14 @@ const theme = createTheme({
         },
       },
     },
-  },
-});
+  
+};
 
-export default theme;
+const typographyOptions = (pallete: any)=>({
+  allVariants: {
+    fontFamily: "'Noto Sans', sans-serif",
+    color: pallete.text.primary,
+  },
+})
+
+export {componentsOverride, typographyOptions};

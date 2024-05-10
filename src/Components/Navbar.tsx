@@ -1,7 +1,14 @@
-import { Box, Stack, Typography, Button } from "@mui/material";
+import { Box, Stack, Typography, Button, IconButton } from "@mui/material";
 import Reveal from "../utils/Reveal";
+import { useContext } from "react";
+import { switchThemeContext } from "../context/themeContext";
+import LightModeIcon from '@mui/icons-material/LightMode';
+import DarkModeIcon from '@mui/icons-material/DarkMode';
 
 const Navbar = () => {
+
+    const {toggleTheme, isDark} = useContext(switchThemeContext)
+
     return (
         <Box display="flex" alignItems="center" justifyContent="center">
             <Stack padding="1rem" flexDirection="row" alignItems="center" justifyContent="space-between" borderBottom="1px solid #34343466" 
@@ -29,6 +36,11 @@ const Navbar = () => {
                                 Admin
                             </Button>
                         </a>
+                    </Reveal>
+                    <Reveal>
+                        <IconButton aria-label="theme-switcher" onClick={toggleTheme} sx={{border: 0, ":hover":{bgcolor: "transparent"}}}>
+                          {!isDark ? <DarkModeIcon fontSize="small"/> : <LightModeIcon fontSize="small" sx={{color:"white"}}/>}
+                        </IconButton>
                     </Reveal>
                 </Box>
             </Stack>

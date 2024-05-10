@@ -3,10 +3,12 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import EmailIcon from '@mui/icons-material/Email';
 import Reveal from "../utils/Reveal";
+import { useContext } from "react";
+import { switchThemeContext } from "../context/themeContext";
 
 
 const Hero = () => {
-    
+    const {isDark} = useContext(switchThemeContext)
     return (
         <Stack marginY="2rem" gap="2rem">
             <Stack alignItems="center" position="relative" mt="10rem">
@@ -46,7 +48,7 @@ const Hero = () => {
                 </Reveal>
                 <Reveal>
                     <Stack flexDirection="row" gap="0.5rem">
-                        <LocationOnIcon/>
+                        <LocationOnIcon sx={{color:isDark ? "#C4C7C7" : "#343434"}}/>
                         <Typography variant="body1">Burla, Sambalpur</Typography>
                     </Stack>
                 </Reveal>
@@ -54,7 +56,7 @@ const Hero = () => {
             <Stack justifyContent="center" flexDirection="row" gap="0.5rem">
                 <a href="https://drive.google.com/file/d/1LE4i_kLy31OQAozQ9xhMZph3iwAMG8Jp/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
                     <Button variant="contained" sx={{height:"100%"}}>
-                            <Typography variant="body1" color="white">Resume</Typography>
+                        Resume
                     </Button>
                 </a>
                 <a href="https://github.com/preritagrawal06" target="_blank" rel="noopener noreferrer">
