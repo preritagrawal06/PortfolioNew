@@ -17,7 +17,8 @@ interface IContextProps {
 const switchThemeContext = createContext({} as IContextProps)
 
 const CustomTheme: React.FC<IProps> = ({children}) => {
-    const [isDark, setIsDark] = useState(false)
+    const getCurrentTheme = () => window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const [isDark, setIsDark] = useState(getCurrentTheme())
     const toggleTheme = ()=>{
         setIsDark(!isDark)
     }

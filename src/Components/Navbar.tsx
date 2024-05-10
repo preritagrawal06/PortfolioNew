@@ -1,7 +1,9 @@
-import { Box, Stack, Typography, Button } from "@mui/material";
+import { Box, Stack, Typography, Button, IconButton } from "@mui/material";
 import Reveal from "../utils/Reveal";
 import { useContext } from "react";
 import { switchThemeContext } from "../context/themeContext";
+import LightModeIcon from '@mui/icons-material/LightMode';
+import DarkModeIcon from '@mui/icons-material/DarkMode';
 
 const Navbar = () => {
 
@@ -36,9 +38,9 @@ const Navbar = () => {
                         </a>
                     </Reveal>
                     <Reveal>
-                        <Button variant="outlined" onClick={toggleTheme}>
-                            {!isDark ? "Light" : "Dark"}
-                        </Button>
+                        <IconButton aria-label="theme-switcher" onClick={toggleTheme} sx={{border: 0, ":hover":{bgcolor: "transparent"}}}>
+                          {!isDark ? <DarkModeIcon fontSize="small"/> : <LightModeIcon fontSize="small" sx={{color:"white"}}/>}
+                        </IconButton>
                     </Reveal>
                 </Box>
             </Stack>
