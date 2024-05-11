@@ -5,6 +5,7 @@ import Work from './Components/Work'
 import Skills from './Components/Skills'
 import Footer from './Components/Footer'
 import GetInTouch from './Components/GetInTouch'
+import Experience from './Components/Experience'
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
         <Navbar/>
         <Hero/>
         <Work/>
+        <Experience/>
         <Skills/>
         <GetInTouch/>
         <Footer/>
