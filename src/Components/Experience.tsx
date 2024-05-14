@@ -48,7 +48,7 @@ export default function Experience() {
                         return (
                             <TimelineItem key={index}>
                                 <TimelineOppositeContent
-                                    sx={{ m: 'auto 0' }}
+                                    sx={{ m: 'auto 0', fontSize:{xs:"8px", md:"1rem"} }}
                                     align="right"
                                     variant="body2"
                                     color="text.primary"
@@ -57,16 +57,19 @@ export default function Experience() {
                                 </TimelineOppositeContent>
                                 <TimelineSeparator>
                                     <TimelineConnector />
-                                    <TimelineDot color="primary" variant="outlined">
-                                        <img src={detail.orgLogo} alt="bottom-street logo" width={32} height={32} style={{ borderRadius: "50%" }} />
+                                    <TimelineDot color="primary" variant="outlined" sx={{display:{xs:"none", md:"flex"}}}>
+                                        <img src={detail.orgLogo} alt="bottom-street logo" width={40} height={40} style={{ borderRadius: "50%" }} />
+                                    </TimelineDot>
+                                    <TimelineDot color="primary" variant="outlined" sx={{display:{xs:"flex", md:"none"}}}>
+                                        <img src={detail.orgLogo} alt="bottom-street logo" width={24} height={24} style={{ borderRadius: "50%" }} />
                                     </TimelineDot>
                                     <TimelineConnector />
                                 </TimelineSeparator>
                                 <TimelineContent sx={{ py: '12px', px: 2 }}>
-                                    <Typography variant="h6" component="span">
+                                    <Typography fontWeight="600" sx={{fontSize:{xs:"12px", md:"1.5rem"}}} component="span">
                                         {detail.orgName}
                                     </Typography>
-                                    <Typography>{detail.orgRole}</Typography>
+                                    <Typography sx={{fontSize:{xs:"8px", md:"1rem"}}}>{detail.orgRole}</Typography>
                                 </TimelineContent>
                             </TimelineItem>
                         )

@@ -30,13 +30,15 @@ const Navbar = () => {
                             </Button>
                         </a>
                     </Reveal>
-                    <Reveal>
-                        <a href="https://prerit.sanity.studio/" target="_blank">
-                            <Button variant="outlined">
-                                Admin
-                            </Button>
-                        </a>
-                    </Reveal>
+                    <Box sx={{display:{xs:"none", md:"flex"}}}>
+                        <Reveal>
+                            <a href="https://prerit.sanity.studio/" target="_blank">
+                                <Button variant="outlined">
+                                    Admin
+                                </Button>
+                            </a>
+                        </Reveal>
+                    </Box>
                     <Reveal>
                         <IconButton aria-label="theme-switcher" onClick={toggleTheme} sx={{border: 0, ":hover":{bgcolor: "transparent"}}}>
                           {!isDark ? <DarkModeIcon fontSize="small"/> : <LightModeIcon fontSize="small" sx={{color:"white"}}/>}
