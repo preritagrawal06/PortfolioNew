@@ -24,11 +24,13 @@ const Navbar = () => {
                 </Reveal>
                 <Box display="flex" gap="1rem">
                     <Reveal>
-                        <a href="#work">
-                            <Button variant="contained">
-                            See my work
-                            </Button>
-                        </a>
+                        <Box sx={{display:{xs:"none", md:"flex"}}}>
+                            <a href="#work">
+                                <Button variant="contained">
+                                See my work
+                                </Button>
+                            </a>
+                        </Box>
                     </Reveal>
                     <Box sx={{display:{xs:"none", md:"flex"}}}>
                         <Reveal>

@@ -50,7 +50,7 @@ const Work = () => {
                     work && work.length &&
                     work.map((item: Item, index: Number) => {
                         return (
-                            <Box key={index.toString()} display="flex" flexDirection="column" justifyContent="space-between" gap="1rem" padding="1rem" border="1px solid #d3d3d3" sx={{ transition: "border 0.2s", width: { xs: "90%", sm: "30%", md: "20%" }, ":hover": { border: "1px solid black" } }}>
+                            <Box key={index.toString()} display="flex" flexDirection="column" gap="1rem" padding="1rem" border="1px solid #d3d3d3" sx={{ transition: "border 0.2s", width: { xs: "90%", sm: "30%", md: "20%" }, ":hover": { border: "1px solid black" } }}>
                                 <Reveal>
                                     <Typography variant="h5" fontWeight={500}>{item.title}</Typography>
                                 </Reveal>
@@ -65,7 +65,7 @@ const Work = () => {
                                         }
                                     </Breadcrumbs>
                                 </Reveal>
-                                <img src={urlFor(item.imageRef).url()} alt={item.title} width="100%" />
+                                    <img src={urlFor(item.imageRef).url()} alt={item.title} width="100%" height="350px"/>
                                 <Reveal>
                                     <Typography variant="body2" fontWeight={500}>{item.content[0].text}</Typography>
                                 </Reveal>
