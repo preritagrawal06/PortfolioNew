@@ -69,6 +69,14 @@ const Work = () => {
                                 <Reveal>
                                     <Typography variant="body2" fontWeight={500}>{item.content[0].text}</Typography>
                                 </Reveal>
+                                {
+                                    item.site &&
+                                    <Reveal>
+                                        <span>
+                                            <a href={item.site} target="_blank" rel="noopener noreferrer">Link</a>
+                                        </span>
+                                    </Reveal>
+                                }
                             </Box>
                         )
                     })
