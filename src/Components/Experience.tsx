@@ -13,7 +13,7 @@ const workDetails = [
     {
         orgName: "PaprClip",
         orgRole: "Full Stack Developer",
-        duration: "Mar, 2024 - Present",
+        duration: "Mar, 2024 - Jun, 2024",
         orgLogo: "/bs-logo.svg"
     },
     {

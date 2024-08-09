@@ -45,12 +45,12 @@ const Work = () => {
             <Reveal>
                 <Typography variant="h5" fontWeight={600}>My Works</Typography>
             </Reveal>
-            <Stack justifyContent="center" sx={{ flexDirection: { xs: "column", sm: "row" }, alignItems: { xs: "center", sm: "stretch" } }}>
+            <Stack justifyContent="center" sx={{ flexDirection: { xs: "column", sm: "row" }, alignItems: { xs: "center", sm: "stretch" }, flexWrap:"wrap" }}>
                 {
                     work && work.length &&
                     work.map((item: Item, index: Number) => {
                         return (
-                            <Box key={index.toString()} display="flex" flexDirection="column" gap="1rem" padding="1rem" border="1px solid #d3d3d3" sx={{ transition: "border 0.2s", width: { xs: "90%", sm: "30%", md: "20%" }, ":hover": { border: "1px solid black" } }}>
+                            <Box key={index.toString()} display="flex" flexDirection="column" gap="1rem" padding="1rem" border="1px solid #d3d3d3" sx={{ transition: "border 0.2s", width: { xs: "90%", sm: "35%", md: "28%" }, ":hover": { border: "1px solid black" } }}>
                                 <Reveal>
                                     <Typography variant="h5" fontWeight={500}>{item.title}</Typography>
                                 </Reveal>
