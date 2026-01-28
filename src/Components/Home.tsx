@@ -47,9 +47,12 @@ const Hero = () => {
                     <Typography variant="body1" textAlign="center">A CS undergrad from VSSUT & full-stack developer</Typography>
                 </Reveal>
                 <Reveal>
+                    <Typography variant="body1" textAlign="center">Currently working @ Kfin Technologies</Typography>
+                </Reveal>
+                <Reveal>
                     <Stack flexDirection="row" gap="0.5rem">
                         <LocationOnIcon sx={{color:isDark ? "#C4C7C7" : "#343434"}}/>
-                        <Typography variant="body1">Burla, Sambalpur</Typography>
+                        <Typography variant="body1">Bhubaneswar, Odisha</Typography>
                     </Stack>
                 </Reveal>
             </Stack>

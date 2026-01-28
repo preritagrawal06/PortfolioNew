@@ -11,6 +11,12 @@ import Reveal from '../utils/Reveal';
 
 const workDetails = [
     {
+        orgName: "Kfin Technologies",
+        orgRole: "Software Engineer",
+        duration: "Dec, 2024 - Present",
+        orgLogo: "/kfin-logo.png"
+    },
+    {
         orgName: "PaprClip",
         orgRole: "Full Stack Developer",
         duration: "Mar, 2024 - Jun, 2024",
